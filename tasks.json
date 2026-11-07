@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ собрать проект",
+            "command": "g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++17",
+                // Главный файл лабораторной
+                "${workspaceFolder}/OOPLAB1.cpp",
+                // Сборка всех .cpp файлов из корневых папок модулей
+                "${workspaceFolder}/Attributes/*.cpp",
+                "${workspaceFolder}/Factory/*.cpp",
+                "${workspaceFolder}/Gamefield/*.cpp",
+                "${workspaceFolder}/Units/*.cpp",
+                // Сборка из вложенных папок юнитов
+                "${workspaceFolder}/Units/Archer/*.cpp",
+                "${workspaceFolder}/Units/Cavalry/*.cpp",
+                "${workspaceFolder}/Units/Infantry/*.cpp",
+                "-o",
+                "${workspaceFolder}/OOPLAB1.exe",
+                // Подключаем пути для заголовочных файлов
+                "-I", "${workspaceFolder}",
+                "-I", "${workspaceFolder}/Attributes",
+                "-I", "${workspaceFolder}/Factory",
+                "-I", "${workspaceFolder}/Gamefield",
+                "-I", "${workspaceFolder}/Units",
+                "-I", "${workspaceFolder}/Units/Archer",
+                "-I", "${workspaceFolder}/Units/Cavalry",
+                "-I", "${workspaceFolder}/Units/Infantry"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Полная сборка проекта со всеми вложенными юнитами"
+        }
+    ]
+}
