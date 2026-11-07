@@ -75,9 +75,9 @@
 Units on original field: 3
 
 === SCENARIO 2: Custom Iterator Test ===
- - Unit: Мечник [Infantry] at (0, 0), HP: 100
- - Unit: Тяжелый лучник [Archer] at (1, 1), HP: 80
- - Unit: Катафракт [Cavalry] at (2, 2), HP: 150
+ - Unit: Swordsman [Infantry] at (0, 0), HP: 100
+ - Unit: HeavyArcher [Archer] at (1, 1), HP: 80
+ - Unit: Cataphract [Cavalry] at (2, 2), HP: 150
 
 === SCENARIO 3: Deep Copy (Rule of Five) ===
 Units on cloned field: 3
